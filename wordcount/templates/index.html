@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>
+        <h1>Sample Django Project</h1>
+    </title>
+</head>
+<body>
+<h2></h2>
+<div><br><hr></div>
+<form id="search_form_id" method="post" action="{% url 'search' %}">
+    <label> Enter a sentence: </label>
+         <textarea rows="6" id="input_text" name="input_text" style="width: 400px"></textarea>
+         <input id="submit_button" type="submit" value="submit"/>
+      </form>
+<br>
+<br>
+<label>Output: </label>
+<dl>
+      {% for key, value in result.items %}
+            <dt>{{ key }} - {{ value }}</dt>
+      {% endfor %}
+</dl>
+</body>
+</html>
